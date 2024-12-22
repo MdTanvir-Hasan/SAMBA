@@ -29,16 +29,13 @@ The file "Execution" contains the code for running the model in the training and
 
 If you find our paper and code useful, please kindly cite our paper as follows:
 ```bibtex
-@article{b16,
-  title={Joint spectrum, precoding, and phase shifts design for {RIS}-aided multiuser {MIMO} {TH}z systems},
-  author={Mehrabian, Ali and Wong, Vincent W. S.},
-  journal={IEEE Trans. Commun.},
- volume={72},
-  number={8},
-  pages={5087-5101},
-month={Aug.},
-  year={2024}
-}
+%@INPROCEEDINGS{samba,
+%  author={Mehrabian, Ali and Hoseinzade, Ehsan and Mazloum, Mahdi and Chen, Xiaohong},
+%  booktitle={Accepted for Publication in Proc. IEEE Int. Conf. Acoust., Speech, Signal Process. (ICASSP)}, 
+%  title={Mamba Meets Finacial Markets: {A} Graph-{M}amba Approach for Stock Price Forecasting}, 
+%  year={2025},
+%address={Rome, Italy},
+%month={May}}
 ```
 
 ## Contact
