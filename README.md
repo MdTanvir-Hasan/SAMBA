@@ -7,6 +7,7 @@ This is the official Pytorch implementation of the SAMBA, which is proposed in o
 First, check the requirements as follows:\
 python\
 numpy\
+pandas\
 pytorch
 
 Then clone the repository as follows:
