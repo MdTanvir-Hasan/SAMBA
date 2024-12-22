@@ -13,6 +13,7 @@ First, check the requirements as follows:\
 python\
 numpy\
 pandas\
+einops\
 pytorch
 
 Then clone the repository as follows:
