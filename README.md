@@ -1,4 +1,4 @@
-# SAMBA: A Graph-Mamba Approach for Stock Price Forecasting
+# SAMBA: A Graph-Mamba Approach for Stock Price Prediction
 
 <p align="center">
   <img src="abc.PNG" alt="Title of the Picture">
