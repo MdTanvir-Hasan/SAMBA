@@ -36,13 +36,13 @@ The file "Execution" file contains the code for running the model, model paramet
 
 If you find our paper and code useful, please kindly cite our paper as follows:
 ```bibtex
-@INPROCEEDINGS{samba,
-  author={Mehrabian, Ali and Hoseinzade, Ehsan and Mazloum, Mahdi and Chen, Xiaohong},
-  booktitle={Proc. IEEE Int. Conf. Acoust., Speech, Signal Process. (ICASSP)}, 
-  title={Mamba Meets Finacial Markets: {A} Graph-{M}amba Approach for Stock Price Prediction}, 
-  year={2025},
-address={Hyderabad, India},
-month={Apr.}}
+@article{samba,
+author = {Mehrabian, Ali and Hoseinzade, Ehsan and Mazloum, Mahdi and Chen, Xiaohong},
+title = {Mamba Meets Finacial Markets: {A} Graph-{M}amba Approach for Stock Price Prediction},
+journal = {\rm{accepted for publication in} \textit{Proc. IEEE Int. Conf. Acoust., Speech, Signal Process. (ICASSP)}},
+year = {2024},
+month={Hyderabad, India, Apr.}
+}
 ```
 
 ## Contact
