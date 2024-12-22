@@ -36,7 +36,7 @@ If you find our paper and code useful, please kindly cite our paper as follows:
   title={Mamba Meets Finacial Markets: {A} Graph-{M}amba Approach for Stock Price Forecasting}, 
   year={2025},
 address={Hyderabad, India},
-%month={Apr.}}
+month={Apr.}}
 ```
 
 ## Contact
