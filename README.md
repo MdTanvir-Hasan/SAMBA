@@ -3,7 +3,7 @@
 This is the official Pytorch implementation of the SAMBA, which is proposed in our paper ["Mamba Meets Finacial Markets: A Graph-Mamba Approach for Stock Price Forecasting"](https://arxiv.org/pdf/2410.03707) accepted for publication in *IEEE ICASSP*, 2025.
 
 <p align="center">
-  <img src="abc.png" alt="Title of the Picture">
+  <img src="abc.PNG" alt="Title of the Picture">
   <br>
   <em>Fig. 1 Illustartion of the spectrogram of the spoken word "nineteenth century".</em>
   
