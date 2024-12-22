@@ -9,12 +9,13 @@ python\
 numpy\
 pytorch
 
-
-
 Then clone the repository as follows:
 ```shell
 git clone https://github.com/Ali-Meh619/SAMBA.git
 ```
+
+## Dataset
+We utilize three real-world datasets from the US stock market with 82 daily stock features: NASDAQ, New York Stock Exchange (NYSE), andDowJonesIndustrial Average (DJIA), covering the period from January 2010 to November 2023.
 
 ## Description
 
