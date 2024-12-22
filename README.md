@@ -5,7 +5,7 @@
   <br>
 </p>
 
-This is the official Pytorch implementation of the SAMBA, which is proposed in our paper ["Mamba Meets Finacial Markets: A Graph-Mamba Approach for Stock Price Forecasting"](https://arxiv.org/pdf/2410.03707) accepted for publication in *IEEE ICASSP*, 2025.
+This is the official Pytorch implementation of the SAMBA, which is proposed in our paper ["Mamba Meets Finacial Markets: A Graph-Mamba Approach for Stock Price Prediction"](https://arxiv.org/pdf/2410.03707) accepted for publication in *IEEE ICASSP*, 2025.
 
 ## Installation
 
@@ -38,7 +38,7 @@ If you find our paper and code useful, please kindly cite our paper as follows:
 @INPROCEEDINGS{samba,
   author={Mehrabian, Ali and Hoseinzade, Ehsan and Mazloum, Mahdi and Chen, Xiaohong},
   booktitle={Proc. IEEE Int. Conf. Acoust., Speech, Signal Process. (ICASSP)}, 
-  title={Mamba Meets Finacial Markets: {A} Graph-{M}amba Approach for Stock Price Forecasting}, 
+  title={Mamba Meets Finacial Markets: {A} Graph-{M}amba Approach for Stock Price Prediction}, 
   year={2025},
 address={Hyderabad, India},
 month={Apr.}}
