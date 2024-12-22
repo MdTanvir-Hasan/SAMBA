@@ -26,10 +26,10 @@ We utilize three real-world datasets from the US stock market with 82 daily stoc
 
 ## Description
 
-The file "System Setup and Generating Dataset" contains the code for simulation parameters, creating the system environment and generating the training and test datasets.\
-The file "MHGphormer Architecture" contains the code for the MHGphormer learning algorithm.\
-The file "Loss Function and Training" contains the code for designing the loss function based on the optimization problem and the training process.\
-The file "Execution" contains the code for running the model in the training and test phases.
+The file "Dataset" file contains the code for generating the training and test datasets.\
+The file "Model" file contains the code for the SAMBA learning algorithm.\
+The file "Training" file contains the code for designing the loss function and the training process.\
+The file "Execution" file contains the code for running the model, model parameters, and performance metrics in the training and test phases.
 
 
 ## Citation
