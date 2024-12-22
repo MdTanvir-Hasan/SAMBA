@@ -40,7 +40,7 @@ If you find our paper and code useful, please kindly cite our paper as follows:
 author = {Mehrabian, Ali and Hoseinzade, Ehsan and Mazloum, Mahdi and Chen, Xiaohong},
 title = {Mamba Meets Finacial Markets: {A} Graph-{M}amba Approach for Stock Price Prediction},
 journal = {\rm{accepted for publication in} \textit{Proc. IEEE Int. Conf. Acoust., Speech, Signal Process. (ICASSP)}},
-year = {2024},
+year = {2025},
 month={Hyderabad, India, Apr.}
 }
 ```
