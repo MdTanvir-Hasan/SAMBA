@@ -1,4 +1,7 @@
 # SAMBA: A Graph-Mamba Approach for Stock Price Prediction
+[**Read the full paper on arXiv**](https://arxiv.org/pdf/2410.03707)
+
+
 
 <p align="center">
   <img src="abc.PNG" alt="Title of the Picture">
