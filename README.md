@@ -34,6 +34,7 @@ The file "Dataset" file contains the code for generating the training and test d
 The file "Model" file contains the code for the SAMBA learning algorithm.\
 The file "Training" file contains the code for designing the loss function and the training process.\
 The file "Execution" file contains the code for running the model, model parameters, and performance metrics in the training and test phases.
+The file 'One File Code' contains the entire code in a single file for easy execution.
 
 
 ## Citation
