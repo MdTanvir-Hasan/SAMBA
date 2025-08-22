@@ -1,4 +1,29 @@
 {
+  "name": "GPU Codespace",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-24.04",
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {},
+    "ghcr.io/devcontainers/features/python:1": {
+      "version": "3.11"
+    },
+    "ghcr.io/devcontainers/features/nvidia-cuda:2.0.0": {
+      "version": "12.4",
+      "installCudaToolkit": true,
+      "installCudnn": false
+    }
+  },
+  "runArgs": [
+    "--gpus=all",
+    "--shm-size=2g"
+  ],
+  "containerEnv": {
+    "NVIDIA_VISIBLE_DEVICES": "all",
+    "NVIDIA_DRIVER_CAPABILITIES": "compute,utility"
+  },
+  "hostRequirements": {
+    "gpu": "nvidia"
+  },
+  "postCreateCommand": "bash .devcontainer/verify-gpu.sh || true",
   "customizations": {
     "vscode": {
       "extensions": [
@@ -7,9 +32,6 @@
       ]
     }
   },
-  "features": {
-    "ghcr.io/devcontainers/features/nvidia-cuda:1": {
-      "installCudnn": true
-    }
-  }
+  "remoteUser": "vscode",
+  "updateRemoteUserUID": true
 }
