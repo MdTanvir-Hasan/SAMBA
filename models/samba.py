@@ -66,8 +66,8 @@ class SAMBA(nn.Module):
         # Generate adjacency matrix using Gaussian kernel
         ADJ = self.gaussian_kernel_graph(self.adj, xx, gamma=self.gamma)
         
-        # Identity matrix
-        I = torch.eye(input_ids.size(2)).cuda()
+        # Identity matrix - use same device as input tensor
+        I = torch.eye(input_ids.size(2), device=input_ids.device)
         
         # Build Chebyshev polynomial support set
         support_set = [I, ADJ]

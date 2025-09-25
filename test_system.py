@@ -44,12 +44,19 @@ def test_forward_pass():
     # Create model
     model = test_model_creation()
     
+    # Determine device
+    device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
+    print(f"Using device: {device}")
+    
+    # Move model to device
+    model = model.to(device)
+    
     # Create dummy input
     batch_size = 2
     seq_len = 5
     num_nodes = 10
     
-    input_tensor = torch.randn(batch_size, seq_len, num_nodes)
+    input_tensor = torch.randn(batch_size, seq_len, num_nodes, device=device)
     
     # Forward pass
     with torch.no_grad():
@@ -95,6 +102,10 @@ def test_utilities():
     # Test seed initialization
     init_seed(42)
     print("✓ Seed initialization successful")
+    
+    # Test device detection
+    device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
+    print(f"✓ Device detection: {device}")
     
     # Test model parameter printing
     model = test_model_creation()
