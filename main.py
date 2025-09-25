@@ -220,8 +220,8 @@ def main(datasetPath):
 if __name__ == "__main__":
     datasets = [
         "Dataset/combined_dataframe_IXIC.csv",
-        "Dataset/combined_dataframe_IXIC.csv",
-        "Dataset/combined_dataframe_IXIC.csv",
+        "Dataset/combined_dataframe_DJI.csv.csv",
+        "Dataset/combined_dataframe_NYSE.csv",
     ]
     for dataset in datasets:
         main(dataset)
