@@ -208,7 +208,7 @@ def main(datasetPath):
     os.makedirs(result_train_file, exist_ok=True)
 
     with open("samba_results.txt", "a") as f:
-        f.write(f"Dataset used : {datasetPath}")
+        f.write(f"Dataset used : {datasetPath}\n")
         f.write(f"IC: {np.array(IC)}\n")
         f.write(f"RIC: {np.array(RIC)}\n")
         f.write(f"MAE: {np.array(mae)}\n")
@@ -220,7 +220,7 @@ def main(datasetPath):
 if __name__ == "__main__":
     datasets = [
         "Dataset/combined_dataframe_IXIC.csv",
-        "Dataset/combined_dataframe_DJI.csv.csv",
+        "Dataset/combined_dataframe_DJI.csv",
         "Dataset/combined_dataframe_NYSE.csv",
     ]
     for dataset in datasets:

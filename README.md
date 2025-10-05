@@ -231,12 +231,13 @@ The model outputs results to:
 If you find our paper and code useful, please kindly cite our paper as follows:
 
 ```bibtex
-@article{samba,
-author = {Mehrabian, Ali and Hoseinzade, Ehsan and Mazloum, Mahdi and Chen, Xiaohong},
-title = {Mamba Meets Financial Markets: {A} Graph-{M}amba Approach for Stock Price Prediction},
-journal = {\rm{accepted for publication in} \textit{Proc. IEEE Int. Conf. Acoust., Speech, Signal Process. (ICASSP)}},
-year = {2025},
-month={Hyderabad, India, Apr.}
+@inproceedings{SAMBA,
+  title={Mamba Meets Financial Markets: {A} {G}raph-{M}amba Approach for Stock Price Prediction},
+  author={Mehrabian, Ali and Hoseinzade, Ehsan and Mazloum, Mahdi and Chen, Xiaohong},
+  booktitle={Proc. IEEE Int. Conf. Acoust., Speech, Signal Process. (ICASSP)},
+address={Hyderabad, India},
+  month={Apr.},
+  year={2025}
 }
 ```
 
