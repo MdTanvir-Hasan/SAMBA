@@ -37,6 +37,30 @@ class SAMBA(nn.Module):
         self.proj = nn.Linear(model_args.vocab_size, 1)
         self.proj_seq = nn.Linear(model_args.seq_in, 1)
 
+        # Initialize weights properly to prevent gradient explosion
+        self._init_weights()
+
+    def _init_weights(self):
+        """Initialize model weights with Xavier/Glorot initialization"""
+        # Initialize learnable parameters with small values
+        nn.init.xavier_uniform_(self.adj, gain=0.01)
+        nn.init.xavier_uniform_(self.embed_w, gain=0.01)
+        nn.init.xavier_uniform_(self.weights_pool, gain=0.01)
+        nn.init.zeros_(self.bias_pool)
+
+        # Initialize output projection layers
+        nn.init.xavier_uniform_(self.proj.weight, gain=0.01)
+        nn.init.zeros_(self.proj.bias)
+        nn.init.xavier_uniform_(self.proj_seq.weight, gain=0.01)
+        nn.init.zeros_(self.proj_seq.bias)
+
+    def to(self, *args, **kwargs):
+        """Override to method to ensure all parameters are moved to device"""
+        super().to(*args, **kwargs)
+        # Ensure gamma parameter is also moved
+        self.gamma.data = self.gamma.data.to(*args, **kwargs)
+        return self
+
     def gaussian_kernel_graph(self, E_A, x, gamma=1.0):
         """Generate graph adjacency matrix using Gaussian kernel"""
         x_mean = torch.mean(x, dim=0)
@@ -49,11 +73,18 @@ class SAMBA(nn.Module):
         # Pairwise squared Euclidean distances
         distance_matrix = torch.sum((E_A_expanded - E_A_T_expanded) ** 2, dim=2)
 
-        # Apply Gaussian kernel
-        A = torch.exp(-gamma * distance_matrix)
+        # Apply Gaussian kernel - ensure gamma is on same device as distance_matrix
+        gamma_tensor = (
+            gamma.detach().clone()
+            if torch.is_tensor(gamma)
+            else torch.tensor(
+                gamma, device=distance_matrix.device, dtype=distance_matrix.dtype
+            )
+        )
+        A = torch.exp(-gamma_tensor * distance_matrix)
 
-        # Apply dropout
-        dr = nn.Dropout(0.35)
+        # Apply dropout - create on same device
+        dr = nn.Dropout(0.35).to(distance_matrix.device)
 
         # Normalize the adjacency matrix with softmax (row-wise)
         A = F.softmax(A, dim=1)
@@ -66,7 +97,9 @@ class SAMBA(nn.Module):
         xx = self.mam1(input_ids)
 
         # Generate adjacency matrix using Gaussian kernel
-        ADJ = self.gaussian_kernel_graph(self.adj, xx, gamma=self.gamma)
+        # Ensure gamma is on same device as input
+        gamma_val = self.gamma.to(input_ids.device)
+        ADJ = self.gaussian_kernel_graph(self.adj, xx, gamma=gamma_val)
 
         # Identity matrix - use same device as input tensor
         I = torch.eye(input_ids.size(2), device=input_ids.device)

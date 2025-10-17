@@ -33,19 +33,31 @@ def get_paper_config():
         lag=5,                # Input sequence length
         horizon=1,            # Prediction horizon
         num_nodes=82,         # 82 daily stock features
-        val_ratio=0.15,       # 15% validation
-        test_ratio=0.15,      # 15% test
+        # Default settings
+        # val_ratio=0.15,       # 15% validation
+        # test_ratio=0.15,      # 15% test
+        # Paper settings
+        val_ratio = 0.05,
+        test_ratio = 0.15,
         input_dim=1,
         output_dim=1,
         embed_dim=10,         # Embedding dimension
-        rnn_units=128,        # RNN units
+        # rnn_units = 128 # Default setting
+        rnn_units = 64,  # Paper setting   
         num_layers=3,         # Number of layers
         cheb_k=3,             # Chebyshev polynomial order
         d_in=32,              # Input dimension
-        hid=32,               # Hidden dimension
-        batch_size=32,        # Batch size
-        epochs=1100,          # Training epochs
-        lr_init=0.001,        # Initial learning rate
+        # hid = 32 # Default setting
+        hid = 64,  # Paper setting
+        # Default settings
+        # batch_size=32,        # Batch size
+        # epochs=1100,          # Training epochs
+        # lr_init=0.001,        # Initial learning rate
+        # paper settings
+        batch_size = 128,
+        epochs  = 1500,
+        lr_init = 0.001,
+        
         lr_decay=True,        # Learning rate decay
         lr_decay_rate=0.5,    # Decay rate
         lr_decay_step=[40, 70, 100],  # Decay steps
