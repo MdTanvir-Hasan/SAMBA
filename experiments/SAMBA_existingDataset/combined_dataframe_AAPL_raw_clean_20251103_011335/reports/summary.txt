@@ -1,0 +1,25 @@
+
+# SAMBA Experiment Results Summary
+
+## Best Performance
+- **Seed:** 3
+- **Validation Loss:** 4.2119
+- **Test MAE:** 0.0367
+- **Test RMSE:** 0.0386
+- **Best Epoch:** 117
+- **Training Time:** 7.52 minutes
+
+## Statistical Summary (All Runs)
+- **Number of Runs:** 20
+- **Successful Runs:** 20
+- **Average Test MAE:** 0.1511 ± 0.2268
+- **Average Test RMSE:** 0.1527 ± 0.2262
+- **Best Test MAE:** 0.0064
+- **Total Training Time:** 3.43 hours
+
+## Key Findings
+- Model converged on average at epoch 213 (±219)
+- Performance variance (Test MAE std): 0.2268
+- Best run outperformed average by 0.1143 MAE points
+
+Generated on: 2025-11-03 04:39:39
